@@ -1,0 +1,69 @@
+.header
+    position: fixed
+    top: 0
+    background: $color-white
+    width: 100vw
+    z-index: 100
+    &__wrapper
+        margin: 16px 0 14px
+        display: grid
+        grid-template-columns: fit-content(100%) 1fr
+        gap: 41px
+        justify-content: space-between
+        align-items: center
+    &__logo
+        position: relative
+        display: flex
+        align-items: center
+        width: 170px
+        z-index: 90
+        img
+            margin-right: 8px
+        span
+            font-family: $font-sans
+            font-weight: 800
+            text-transform: uppercase
+            font-size: 20px
+    &__menu
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        justify-content: center
+        justify-items: center
+    &__list
+        justify-self: end
+        padding: 0
+        list-style-type: none
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        align-content: center
+        gap: 37px
+        height: 100%
+    &__link
+        padding-bottom: 12px
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 2px
+        color: $color-black
+        text-transform: uppercase
+        position: relative
+        transition: color .3s linear
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 0
+            height: 2px
+            background: $color-accent
+            transition: width .3s linear
+        &:hover
+            @media ( min-width: 1024px )
+                color: $color-lightGrey
+        &--active
+            &:hover
+                @media ( min-width: 1024px )
+                    color: $color-black
+            &::after
+                width: 100%

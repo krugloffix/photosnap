@@ -1,0 +1,95 @@
+@import 'imports'
+
+html
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+*,
+*::before,
+*::after
+    box-sizing: inherit
+
+body
+    font-family: $font-dm
+a
+    color: inherit
+    text-decoration: none
+
+img
+    max-width: 100%
+
+.visually-hidden
+    position: fixed
+    transform: scale(0)
+
+.container
+    margin: 0 auto
+    max-width: 90%
+
+.main__btn
+    justify-self: end
+    padding: 12px 24px
+    font-weight: 700
+    font-size: 12px
+    line-height: 16px
+    letter-spacing: 2px
+    text-transform: uppercase
+    cursor: pointer
+    transition: background .3s linear, color .3s linear, border .3s linear
+    &:hover
+        @media ( min-width: 1024px )
+            background: $color-lightGrey
+            color: $color-black
+            border: 1px solid $color-lightGrey
+        &:active
+            border: 1px solid $color-black
+    &--black
+        background: $color-black
+        color: $color-white
+        border: 1px solid $color-black
+    &--white
+        color: $color-black
+        background: $color-white
+        border: 1px solid $color-white
+
+.arrow__btn
+    display: block
+    width: fit-content
+    font-weight: 700
+    font-size: 12px
+    line-height: 16px
+    letter-spacing: 2px
+    color: $color-black
+    text-transform: uppercase
+    position: relative
+    cursor: pointer
+    &::before
+        content: ''
+        display: block
+        width: 42px
+        height: 12px
+        position: absolute
+        right: calc( (26px + 42px) * -1 )
+        top: 50%
+        transform: translateY(-50%)
+        background: $color-black
+        mask: url('../assets/arrow.svg')
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 0
+        height: 1px
+        background: $color-black
+        transition: width .3s linear
+    &:hover::after
+        @media ( min-width: 1024px )
+            width: 100%
+    &--white
+        color: $color-white
+        &::before
+            background: $color-white
+            mask: url('../assets/arrow.svg')
+        &::after
+            background: $color-white
