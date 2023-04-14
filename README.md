@@ -4,7 +4,7 @@
 
 <p><b>Photosnap</b> is an SPA platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others. </p>
 
-👉 Live Demo: <a href=''>Photosnap Demo</a>
+👉 Live Demo: <a href='https://photosnap-irinakruglova.vercel.app/'>Photosnap Demo</a>
 
 <h3>Build with:</h3>
 
